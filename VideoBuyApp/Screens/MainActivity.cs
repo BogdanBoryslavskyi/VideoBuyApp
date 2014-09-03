@@ -39,7 +39,7 @@ namespace VideoBuyApp
 			_VideosListAdapter = new VideosListAdapter (this, items);
 			_UiVideosList.Adapter = _VideosListAdapter;
 
-
+			int test = 1;
 		}
 	}
 }
