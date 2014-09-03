@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/wood_bg1">
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="224.5dp"
+        android:id="@+id/videoView1"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp" />
+    <TextView
+        android:text="Name: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UiVideoTitle"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="Timing: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/VideoTiming"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="Price: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UiVideoPrice"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp" />
+    <EditText
+        android:text="Write Massage:"
+        android:layout_width="match_parent"
+        android:layout_height="109.9dp"
+        android:id="@+id/MassageField"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:layout_marginRight="6dp" />
+    <Button
+        android:text="Buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp" />
+</LinearLayout>

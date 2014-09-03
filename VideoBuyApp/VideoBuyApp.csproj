@@ -49,6 +49,7 @@
     <Compile Include="Screens\MainActivity.cs" />
     <Compile Include="VideosListAdapter.cs" />
     <Compile Include="VideoItem.cs" />
+    <Compile Include="PreviewBuyActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -65,6 +66,7 @@
     <AndroidResource Include="Resources\layout\VideoListItem.axml" />
     <AndroidResource Include="Resources\drawable\video_thumbnail_default1.png" />
     <AndroidResource Include="Resources\drawable\video_thumbnail_default2.png" />
+    <AndroidResource Include="Resources\layout\Preview_Buy.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -1,1 +1,1 @@
-D:\Projects\VideoBuyApp\VideoBuyApp\VideoBuyApp\bin\Debug\VideoBuyApp.dll
+D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\bin\Debug\VideoBuyApp.dll
