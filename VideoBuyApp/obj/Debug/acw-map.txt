@@ -1,0 +1,2 @@
+VideoBuyApp.MainActivity;videobuyapp.MainActivity
+VideoBuyApp.VideosListAdapter;videobuyapp.VideosListAdapter

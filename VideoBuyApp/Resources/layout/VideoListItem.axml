@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:maxWidth="80dp"
+        android:maxHeight="80dp"
+        android:id="@+id/UiVideoIcon"
+        android:src="@drawable/video_thumbnail_default1" />
+    <TextView
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:text="Video Name"
+        android:id="@+id/UiVideoTitle"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="1" />
+    <TextView
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:text="price"
+        android:id="@+id/UiVideoPrice"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="1" />
+    <Button
+        android:text="Preview &amp; Bue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UiPreviewAndBuyButton"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:textSize="12dp" />
+</LinearLayout>
