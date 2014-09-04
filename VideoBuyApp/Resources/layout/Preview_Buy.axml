@@ -8,7 +8,7 @@
     android:background="@drawable/wood_bg1">
     <VideoView
         android:layout_width="match_parent"
-        android:layout_height="224.5dp"
+        android:layout_height="220.6dp"
         android:id="@+id/videoView1"
         android:layout_marginTop="6dp"
         android:layout_marginLeft="6dp"

@@ -8,6 +8,7 @@ namespace VideoBuyApp
 		public string _VideoName;
 		public string _VideoIcon;
 		public decimal _VideoPrice;
+		public decimal _VideoTiming;
 	}
 }
 

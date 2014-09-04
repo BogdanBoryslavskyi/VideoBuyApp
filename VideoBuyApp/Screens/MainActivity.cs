@@ -22,6 +22,8 @@ namespace VideoBuyApp
 
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+		
+
 
 			_UiVideosList = FindViewById<ListView> (Resource.Id.UiVideosList);
 
@@ -38,8 +40,22 @@ namespace VideoBuyApp
 
 			_VideosListAdapter = new VideosListAdapter (this, items);
 			_UiVideosList.Adapter = _VideosListAdapter;
+
+		
+			View viewVideoItem = this.LayoutInflater.Inflate (Resource.Layout.VideoListItem, null);
+			var UiPreviewAndBuy = viewVideoItem.FindViewById<Button> (Resource.Id.UiPreviewAndBuyButton);
+			UiPreviewAndBuy.Click += delegate {
+				//To Do
+				Intent PrevBuyActivity = new Intent (this, typeof(PreviewBuyActivity));
+				//PrevBuyActivity.PutExtra(" VideoName ","Test Name");
+				StartActivity (PrevBuyActivity);
+
+
+			
+			};
+		
 		}
-	}
+}
 }
 
 

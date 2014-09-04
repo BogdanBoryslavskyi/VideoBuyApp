@@ -43,13 +43,11 @@ namespace VideoBuyApp
 				//To Do
 				Toast.MakeText(_Context, "PreviewAndBuy", ToastLength.Short);
 			};
-
 			var UiVideoIcon = view.FindViewById<ImageView> (Resource.Id.UiVideoIcon);
 			UiVideoIcon.Click += delegate {
 				//To Do
 				Toast.MakeText(_Context, "VideoIcon", ToastLength.Short);
 			};
-
 			return view;
 		}
 
