@@ -20,11 +20,12 @@ namespace VideoBuyApp
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Preview_Buy);
-			/*String Test;
+			String Test;
 			int Id;
 			TextView IdTest = FindViewById<TextView> (Resource.Id.UiVideoTitle);
-			Test = Intent.GetStringExtra ("VideoId");
-			*/
+			IdTest = new TextView (this);
+			Test = Intent.GetStringExtra("VideoName");
+			IdTest.Text = Test;
 						// Create your application here
 		}
 	}

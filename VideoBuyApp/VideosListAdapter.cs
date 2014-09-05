@@ -41,7 +41,11 @@ namespace VideoBuyApp
 			var UiPreviewAndBuy = view.FindViewById<Button> (Resource.Id.UiPreviewAndBuyButton);
 			UiPreviewAndBuy.Click += delegate {
 				//To Do
+				Intent PrevBuyActivity = new Intent (_Context, typeof(PreviewBuyActivity));
+				PrevBuyActivity.PutExtra(" VideoName ",_VideoItems [position]._VideoName);
+				_Context.StartActivity (PrevBuyActivity);
 				Toast.MakeText(_Context, "PreviewAndBuy", ToastLength.Short);
+
 			};
 			var UiVideoIcon = view.FindViewById<ImageView> (Resource.Id.UiVideoIcon);
 			UiVideoIcon.Click += delegate {
