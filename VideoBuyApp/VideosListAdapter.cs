@@ -42,7 +42,7 @@ namespace VideoBuyApp
 			UiPreviewAndBuy.Click += delegate {
 				//To Do
 				Intent PrevBuyActivity = new Intent (_Context, typeof(PreviewBuyActivity));
-				PrevBuyActivity.PutExtra(" VideoName ",_VideoItems [position]._VideoName);
+				PrevBuyActivity.PutExtra("VideoName",_VideoItems [position]._VideoName);
 				_Context.StartActivity (PrevBuyActivity);
 				Toast.MakeText(_Context, "PreviewAndBuy", ToastLength.Short);
 
