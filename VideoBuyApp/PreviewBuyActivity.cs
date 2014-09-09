@@ -34,17 +34,18 @@ namespace VideoBuyApp
 			Test = Intent.GetStringExtra ("VideoName");
 			IdTest.Text = Test;
 			videoView = FindViewById<VideoView> (Resource.Id.videoPlayer);
-			String Path = "http://smotri.com/video/view/?id=v244732062d2";                   
+			String Path = "http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4";                   
 			var  uri = Android.Net.Uri.Parse(Path);
-			videoView.SetVideoURI (uri);
-			videoView.RequestFocus ();
-			videoView.SetVideoPath (Path);
-			videoView.Start ();
+		
+			//videoView.SetVideoURI (uri);
+			//videoView.RequestFocus ();
+			//videoView.SetVideoPath (Path);
+			//videoView.Start ();
 			//play("http://smotri.com/video/view/?id=v244732062d2");
-
+			play (Path);
 		}
 
-		/*void play(string fullPath)
+		void play(string fullPath)
 		{
 			ISurfaceHolder holder = videoView.Holder;
 			holder.SetType (SurfaceType.PushBuffers);
@@ -57,7 +58,8 @@ namespace VideoBuyApp
 				player.Prepare ();
 				player.Start ();
 			}
-		}*/
+		
+		}
 		public void SurfaceCreated(ISurfaceHolder holder)
 		{
 			Console.WriteLine("SurfaceCreated");

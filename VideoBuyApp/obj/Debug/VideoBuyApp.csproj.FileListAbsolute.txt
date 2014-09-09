@@ -95,3 +95,4 @@ D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\obj\Debug\res\drawable
 D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\obj\Debug\res\layout\preview_buy.xml
 D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\obj\Debug\R.cs.flag
 D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\obj\Debug\uploadflags.txt
+D:\AndroidDev\Xamarine_Progect\AtamansProgect\VideoBuyApp\obj\Debug\res\layout\finaldialog.xml
