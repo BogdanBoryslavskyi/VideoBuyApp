@@ -55,6 +55,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Video\Cat.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -67,9 +68,11 @@
     <AndroidResource Include="Resources\drawable\video_thumbnail_default1.png" />
     <AndroidResource Include="Resources\drawable\video_thumbnail_default2.png" />
     <AndroidResource Include="Resources\layout\Preview_Buy.axml" />
+    <AndroidResource Include="Resources\layout\FinalDialog.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Screens\" />
+    <Folder Include="Video\" />
   </ItemGroup>
 </Project>

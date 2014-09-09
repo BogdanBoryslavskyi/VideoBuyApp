@@ -10,16 +10,20 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Media;
+using Android.Graphics;
+using Android.Util;
+
 
 
 namespace VideoBuyApp
 {
 	[Activity (Label = "PreviewBuyActivity")]			
-	public class PreviewBuyActivity : Activity ,ISurfaceHolderCallback, MediaPlayer.IOnPreparedListener
-		
+	public class PreviewBuyActivity : Activity, ISurfaceHolderCallback
 	{
-		VideoView videoPlay;
+
 		MediaPlayer player;
+		VideoView videoView;
+	
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -27,52 +31,51 @@ namespace VideoBuyApp
 			String Test;
 			//int Id;
 			TextView IdTest = (TextView)FindViewById (Resource.Id.UiVideoTitleBuy);
-			//IdTest = new TextView (this);
 			Test = Intent.GetStringExtra ("VideoName");
-			//Test = String.Format ("{0:0000}",null);
 			IdTest.Text = Test;
+			videoView = FindViewById<VideoView> (Resource.Id.videoPlayer);
+			String Path = "http://smotri.com/video/view/?id=v244732062d2";                   
+			var  uri = Android.Net.Uri.Parse(Path);
+			videoView.SetVideoURI (uri);
+			videoView.RequestFocus ();
+			videoView.SetVideoPath (Path);
+			videoView.Start ();
+			//play("http://smotri.com/video/view/?id=v244732062d2");
 
-			videoPlay = FindViewById<VideoView> (Resource.Id.videoPlayer);
-
-	
-			play ("https://www.youtube.com/watch?v=r6HYDMe825U");
 		}
 
-		void play(string fullPath)
+		/*void play(string fullPath)
 		{
-			VideoView videoPlay = FindViewById<VideoView> (Resource.Id.videoPlayer);
-			ISurfaceHolder holder = videoPlay.Holder;
+			ISurfaceHolder holder = videoView.Holder;
 			holder.SetType (SurfaceType.PushBuffers);
-
-			holder.AddCallback (this);
-			player = new MediaPlayer();
+			holder.AddCallback( this );
+			player = new  MediaPlayer ();
 			Android.Content.Res.AssetFileDescriptor afd = this.Assets.OpenFd(fullPath);
-			player.SetOnPreparedListener(this);
-			if (afd != null)
+			if  (afd != null )
 			{
-				player.SetDataSource(afd.FileDescriptor, afd.StartOffset, afd.Length);
+				player.SetDataSource (afd.FileDescriptor, afd.StartOffset, afd.Length);
 				player.Prepare ();
-				player.Start();
+				player.Start ();
 			}
-		}
-
-		public void SurfaceCreated (ISurfaceHolder holder)
+		}*/
+		public void SurfaceCreated(ISurfaceHolder holder)
 		{
-			Console.WriteLine ("SurfaceCreated");
+			Console.WriteLine("SurfaceCreated");
 			player.SetDisplay(holder);
 		}
-
-		public void SurfaceDestroyed (ISurfaceHolder holder)
+		public void SurfaceDestroyed(ISurfaceHolder holder)
 		{
-			Console.WriteLine ("SurfaceDestroyed");
+			Console.WriteLine("SurfaceDestroyed");
 		}
-
-		public void SurfaceChanged (ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
+		public void SurfaceChanged(ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
 		{
-			Console.WriteLine ("SurfaceChanged");
+			Console.WriteLine("SurfaceChanged");
 		}
+		public void OnPrepared(MediaPlayer player)
+		{
 
-						// Create your application here
+		}
+	
 		}
 	
 }
