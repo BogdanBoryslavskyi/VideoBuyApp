@@ -19,20 +19,21 @@ public final class R {
         public static final int wood_bg2=0x7f020005;
     }
     public static final class id {
-        public static final int MassageField=0x7f050009;
+        public static final int MassageField=0x7f05000a;
         public static final int MassageTechnicField=0x7f050000;
-        public static final int UiPreviewAndBuyButton=0x7f05000d;
-        public static final int UiVideoIcon=0x7f05000b;
-        public static final int UiVideoPrice=0x7f050008;
-        public static final int UiVideoTitle=0x7f05000c;
-        public static final int UiVideoTitleBuy=0x7f050006;
-        public static final int UiVideosList=0x7f050004;
-        public static final int VideoTiming=0x7f050007;
-        public static final int button1=0x7f05000a;
-        public static final int radioButtonEmail=0x7f050002;
-        public static final int radioButtonSMS=0x7f050003;
+        public static final int UiPreviewAndBuyButton=0x7f05000e;
+        public static final int UiVideoIcon=0x7f05000c;
+        public static final int UiVideoPrice=0x7f050009;
+        public static final int UiVideoTitle=0x7f05000d;
+        public static final int UiVideoTitleBuy=0x7f050007;
+        public static final int UiVideosList=0x7f050005;
+        public static final int VideoTiming=0x7f050008;
+        public static final int bBuy=0x7f05000b;
+        public static final int radioButtonEmail=0x7f050003;
+        public static final int radioButtonSMS=0x7f050004;
+        public static final int radioGroup1=0x7f050002;
         public static final int textView1=0x7f050001;
-        public static final int videoPlayer=0x7f050005;
+        public static final int videoPlayer=0x7f050006;
     }
     public static final class layout {
         public static final int finaldialog=0x7f030000;

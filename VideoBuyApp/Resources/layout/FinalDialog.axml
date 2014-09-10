@@ -26,22 +26,28 @@
         android:layout_marginTop="15dp"
         android:textSize="30dp"
         android:linksClickable="true" />
-    <RadioButton
-        android:text="Email"
+    <RadioGroup
+        android:id="@+id/radioGroup1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioButtonEmail"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="20dp"
-        android:textSize="26dp" />
-    <RadioButton
-        android:text="SMS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButtonSMS"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="20dp"
-        android:textSize="26dp" />
+        android:layout_marginTop="24dp">
+        <RadioButton
+            android:text="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonEmail"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:textSize="26dp" />
+        <RadioButton
+            android:text="SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonSMS"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:textSize="26dp" />
+    </RadioGroup>
 </LinearLayout>

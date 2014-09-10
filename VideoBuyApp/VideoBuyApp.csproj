@@ -50,6 +50,7 @@
     <Compile Include="VideosListAdapter.cs" />
     <Compile Include="VideoItem.cs" />
     <Compile Include="PreviewBuyActivity.cs" />
+    <Compile Include="FinalDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

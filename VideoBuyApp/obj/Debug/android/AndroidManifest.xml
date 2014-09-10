@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="VideoBuyApp.VideoBuyApp">
-  <uses-sdk android:minSdkVersion="10" />
+  <uses-sdk android:minSdkVersion="14" />
   <application android:label="VideoBuyApp" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="VideoBuyApp" android:name="videobuyapp.MainActivity">
       <intent-filter>
@@ -9,6 +9,7 @@
       </intent-filter>
     </activity>
     <activity android:label="PreviewBuyActivity" android:name="videobuyapp.PreviewBuyActivity" />
+    <activity android:label="FinalDialog" android:name="videobuyapp.FinalDialog" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="VideoBuyApp.VideoBuyApp.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
