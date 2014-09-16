@@ -28,9 +28,7 @@ namespace VideoBuyApp
 			group = FindViewById<RadioGroup> (Resource.Id.radioGroup1);
 			group.ClearCheck ();
 			bSMS.Click += new EventHandler(bSMS_Click);
-			bEmail.Click += new EventHandler(bEmail_Click);
-
-			// Create your application here
+			bEmail.Click += new EventHandler (bEmail_Click);
 		}
 
 		void bSMS_Click(object sender, EventArgs e)

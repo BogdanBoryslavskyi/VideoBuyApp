@@ -18,55 +18,29 @@ using Android.Util;
 namespace VideoBuyApp
 {
 	[Activity (Label = "PreviewBuyActivity")]			
-	public class PreviewBuyActivity : Activity /*, ISurfaceHolderCallback View.IOnClickListener*/
+	public class PreviewBuyActivity : Activity
 	{
 		MediaPlayer player;
 		Button Buy;
 		String VideoLink;
-		EditText VideoText;
-		VideoView vid;
+	
 		protected override void OnCreate (Bundle bundle)
 		{
 
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Preview_Buy);
 			Buy = FindViewById<Button> (Resource.Id.bBuy);
-			//int Id;
-			//TextView IdTest = (TextView)FindViewById (Resource.Id.UiVideoTitleBuy);
-			VideoText = FindViewById<EditText> (Resource.Id.MassageField);
+			VideoLink = Intent.GetStringExtra ("VideoLink");
 			var vid = FindViewById<SurfaceView>(Resource.Id.videoPlayer);
-			VideoLink = "http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4";
-			//String Path = "http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4";  
-
-			//vid.Visibility = Android.Views.ViewStates.Visible;
+			//VideoLink = "http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4";  
 			var uri = Android.Net.Uri.Parse (VideoLink);
-
-			//vid.Clickable = true;
-			//vid.Focusable = true;
-			//vid.SetOnClickListener (this);
-			/*vid.Click+= (sender, e) => {
-				//var uri = Android.Net.Uri.Parse (VideoLink);
-				var intent = new Intent (Intent.ActionView, uri);
-				StartActivity (intent);
-			}; */
-
-
 			vid.Click+= delegate {
 			
 				var intent = new Intent (Intent.ActionView, uri);
 				StartActivity (intent);
 			};
 			Buy.Click += new EventHandler(Buy_Click);
-			//vid.Click += new EventHandler(vid_Click);
-
 		}
-
-	/*	public void Click(View v)
-		{
-			var uri = Android.Net.Uri.Parse (VideoLink);
-			var intent = new Intent (Intent.ActionView, uri);
-			StartActivity (intent);
-		}*/
 
 		void Buy_Click(object sender, EventArgs e)
 		{
@@ -76,15 +50,10 @@ namespace VideoBuyApp
 			StartActivity(intent);
 		}
 	
-		/*void vid_Click(object sender, EventArgs e)
-		{
-			var uri = Android.Net.Uri.Parse (VideoLink);
-			var intent = new Intent (Intent.ActionView, uri);
-			StartActivity (intent);
-		}*/
 
-	public void SurfaceCreated(ISurfaceHolder holder)
+/*	public void SurfaceCreated(ISurfaceHolder holder)
 		{
+
 			try
 			{
 				player.SetDisplay(holder);
@@ -112,7 +81,7 @@ namespace VideoBuyApp
 		public void SurfaceChanged(ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
 		{
 			Console.WriteLine("SurfaceChanged");
-		}
+		}*/
 
 		}
 	
