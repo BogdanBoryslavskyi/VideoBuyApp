@@ -139,5 +139,6 @@ C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Deb
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\values\splashscreen.xml
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\splashscreen.xml
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\drawable\splash.png
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\drawable\black_bg1.png
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\R.cs.flag
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\uploadflags.txt

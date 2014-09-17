@@ -4,8 +4,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="@drawable/wood_bg1">
+    android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/black_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
