@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace VideoBuyApp
 {
-	[Activity (Label = "FinalDialog", Theme = "@android:style/Theme.NoTitleBar")]			
+	[Activity (Label = "Final Dialog")]			
 	public class FinalDialog : Activity
 	{	
 		RadioButton bSMS;

@@ -28,7 +28,7 @@ namespace VideoBuyApp
 			return _VideoItems [position]._VideoId;
 		}
 
-		public override Android.Views.View GetView (int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
+		public override View GetView (int position, View convertView, ViewGroup parent)
 		{
 			View view = convertView; 
 

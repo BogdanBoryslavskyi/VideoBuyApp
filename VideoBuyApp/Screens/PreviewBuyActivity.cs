@@ -17,35 +17,35 @@ using Android.Util;
 
 namespace VideoBuyApp
 {
-	[Activity (Label = "PreviewBuyActivity",Theme = "@android:style/Theme.NoTitleBar" )]			
+	[Activity (Label = "Preview & Buy" )]			
 	public class PreviewBuyActivity : Activity
 	{
 		MediaPlayer player;
-		Button Buy;
-		String VideoLink;
+		Button _Buy;
+		String _VideoLink;
 	
 		protected override void OnCreate (Bundle bundle)
 		{
 
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Preview_Buy);
-			Buy = FindViewById<Button> (Resource.Id.bBuy);
-			VideoLink = Intent.GetStringExtra ("VideoLink");
+			_Buy = FindViewById<Button> (Resource.Id.bBuy);
+			_VideoLink = Intent.GetStringExtra ("VideoLink");
 			var vid = FindViewById<SurfaceView>(Resource.Id.videoPlayer);
-			var uri = Android.Net.Uri.Parse (VideoLink);
+			var uri = Android.Net.Uri.Parse (_VideoLink);
 			vid.Click+= delegate {
 			
 				var intent = new Intent (Intent.ActionView, uri);
 				StartActivity (intent);
 			};
-			Buy.Click += new EventHandler(Buy_Click);
+			_Buy.Click += new EventHandler(Buy_Click);
 		}
 
 		void Buy_Click(object sender, EventArgs e)
 		{
 			var intent = new Intent (this, typeof(FinalDialog));
 
-			intent.PutExtra ("Extra_Link", VideoLink);
+			intent.PutExtra ("Extra_Link", _VideoLink);
 			StartActivity(intent);
 		}
 	

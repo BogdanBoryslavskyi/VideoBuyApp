@@ -11,13 +11,18 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Android.Graphics;
+using System.Threading.Tasks;
+using Android.Util;
+using System.IO;
+using System.Threading;
 
 namespace VideoBuyApp
 {
 	[Activity (Label = "Video App Bye"
 		, MainLauncher = true
-		//, Icon = "@drawable/icon"
-		//, Theme = "@style/Theme.Splash"
+		, Icon = "@drawable/icon"
+		, Theme = "@style/Theme.Splash"
 		, NoHistory = true
 		, ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class SplashScreen : Activity
@@ -26,7 +31,9 @@ namespace VideoBuyApp
 		{
 			base.OnCreate (bundle);
 
-			// Create your application here
+			Thread.Sleep (2000);
+			StartActivity ( typeof( MainActivity ) );
+
 		}
 	}
 }

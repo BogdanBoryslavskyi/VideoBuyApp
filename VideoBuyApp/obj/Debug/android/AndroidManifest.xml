@@ -2,15 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="VideoBuyApp.VideoBuyApp">
   <uses-sdk android:minSdkVersion="14" />
   <application android:label="VideoBuyApp" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="VideoBuyApp" android:theme="@android:style/Theme.NoTitleBar" android:name="videobuyapp.MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-    <activity android:label="PreviewBuyActivity" android:theme="@android:style/Theme.NoTitleBar" android:name="videobuyapp.PreviewBuyActivity" />
-    <activity android:label="FinalDialog" android:theme="@android:style/Theme.NoTitleBar" android:name="videobuyapp.FinalDialog" />
-    <activity android:label="Video App Bye" android:noHistory="true" android:screenOrientation="portrait" android:name="videobuyapp.SplashScreen">
+    <activity android:icon="@drawable/icon" android:label="VideoBuyApp" android:theme="@android:style/Theme.NoTitleBar" android:name="videobuyapp.MainActivity" />
+    <activity android:label="Preview &amp; Buy" android:name="videobuyapp.PreviewBuyActivity" />
+    <activity android:label="Final Dialog" android:name="videobuyapp.FinalDialog" />
+    <activity android:icon="@drawable/icon" android:label="Video App Bye" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="videobuyapp.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
