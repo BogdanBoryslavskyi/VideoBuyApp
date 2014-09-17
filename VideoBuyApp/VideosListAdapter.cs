@@ -50,6 +50,9 @@ namespace VideoBuyApp
 			var UiVideoIcon = view.FindViewById<ImageView> (Resource.Id.UiVideoIcon);
 			UiVideoIcon.Click += delegate {
 				//To Do
+				var uri = Android.Net.Uri.Parse (_VideoItems [position]._VideoLink);
+				var intent = new Intent (Intent.ActionView, uri);
+				_Context.StartActivity (intent);
 				Toast.MakeText(_Context, "VideoIcon", ToastLength.Short);
 			};
 			return view;

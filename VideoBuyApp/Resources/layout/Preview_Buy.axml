@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="220.6dp"
         android:id="@+id/videoPlayer"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:clickable="true"
@@ -21,28 +21,28 @@
         android:layout_height="wrap_content"
         android:id="@+id/UiVideoTitleBuy"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="10dp" />
     <TextView
         android:text="Timing: "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/VideoTiming"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="10dp" />
     <TextView
         android:text="Price: "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/UiVideoPrice"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="10dp" />
     <EditText
         android:text="Write Massage:"
         android:layout_width="match_parent"
-        android:layout_height="109.9dp"
+        android:layout_height="125.9dp"
         android:id="@+id/MassageField"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="7dp"
         android:gravity="left"
         android:layout_marginRight="6dp" />
     <Button
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bBuy"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginBottom="3dp" />
 </LinearLayout>

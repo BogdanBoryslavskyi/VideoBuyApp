@@ -8,10 +8,10 @@
     android:background="@drawable/wood_bg1">
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="140.2dp"
+        android:layout_height="183.2dp"
         android:id="@+id/MassageTechnicField"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="12dp"
         android:gravity="left"
         android:layout_marginRight="6dp" />
     <TextView

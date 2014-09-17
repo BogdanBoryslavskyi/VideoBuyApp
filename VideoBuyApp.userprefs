@@ -1,10 +1,11 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0123456789ABCDEF" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VideoBuyApp\Screens\MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_14" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VideoBuyApp\Screens\PreviewBuyActivity.cs">
     <Files>
-      <File FileName="VideoBuyApp\Screens\MainActivity.cs" Line="4" Column="4" />
-      <File FileName="VideoBuyApp\Screens\FinalDialog.cs" Line="52" Column="52" />
-      <File FileName="VideoBuyApp\VideosListAdapter.cs" Line="4" Column="4" />
+      <File FileName="VideoBuyApp\Screens\MainActivity.cs" Line="167" Column="167" />
+      <File FileName="VideoBuyApp\Screens\FinalDialog.cs" Line="2" Column="2" />
+      <File FileName="VideoBuyApp\VideosListAdapter.cs" Line="31" Column="31" />
+      <File FileName="VideoBuyApp\Screens\PreviewBuyActivity.cs" Line="65" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

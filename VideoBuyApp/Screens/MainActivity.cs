@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace VideoBuyApp
 {
-	[Activity (Label = "VideoBuyApp", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "VideoBuyApp", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
 	public class MainActivity : Activity
 	{
 		protected Activity _Context;

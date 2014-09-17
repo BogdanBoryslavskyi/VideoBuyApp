@@ -17,7 +17,7 @@ using Android.Util;
 
 namespace VideoBuyApp
 {
-	[Activity (Label = "PreviewBuyActivity")]			
+	[Activity (Label = "PreviewBuyActivity",Theme = "@android:style/Theme.NoTitleBar" )]			
 	public class PreviewBuyActivity : Activity
 	{
 		MediaPlayer player;
@@ -32,7 +32,6 @@ namespace VideoBuyApp
 			Buy = FindViewById<Button> (Resource.Id.bBuy);
 			VideoLink = Intent.GetStringExtra ("VideoLink");
 			var vid = FindViewById<SurfaceView>(Resource.Id.videoPlayer);
-			//VideoLink = "http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4";  
 			var uri = Android.Net.Uri.Parse (VideoLink);
 			vid.Click+= delegate {
 			
