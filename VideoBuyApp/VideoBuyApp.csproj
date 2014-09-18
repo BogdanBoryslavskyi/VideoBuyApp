@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Screens\FinalDialog.cs" />
     <Compile Include="Screens\SplashScreen.cs" />
     <Compile Include="FakeData.cs" />
+    <Compile Include="VideoBuyDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
