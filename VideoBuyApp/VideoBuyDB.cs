@@ -8,15 +8,15 @@ namespace VideoBuyApp
 {
 	public class VideoBuyDB
 	{
-		private static string dbPath = "VideoBuyDB.db3";
+		//private static string dbPath = "VideoBuyDB.db3";
 		private bool _FileExist;
 		//private SqliteConnection connection;
 		protected VideoItem[] _VideoItems;
 		private SqliteConnection _connection;
 		private bool _FileExists;
 
-		public bool ConnectToDB(){
-			string dbPath = System.IO.Path.Combine ( System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), sDBPath );
+		public bool ConnectToDB(string sdbPath){
+			string dbPath = System.IO.Path.Combine ( System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), sdbPath );
 			_FileExists = System.IO.File.Exists (dbPath);
 			if (!_FileExists) {
 				SqliteConnection.CreateFile (dbPath);
@@ -77,8 +77,8 @@ namespace VideoBuyApp
 				// This is the first time the app has run and/or that we need the DB.
 				// Copy a "template" DB from your assets, or programmatically create one like this:
 				foreach (var item in BDVideoItems) {
-					var command = "INSERT INTO VideoBuy (_VideoId, _VideoName, _VideoLink, _VideoPrice, _VideoTiming) VALUES ('" + item._VideoId + "', '" + item._VideoName + "', '" + item._VideoLink + "', '" + item._VideoPrice.ToString + "', '" + item._VideoTiming.ToString ");";
-					using (var c = _connection.CreateCommand ()) {
+					var command = "INSERT INTO VideoBuy (_VideoId, _VideoName, _VideoLink, _VideoPrice, _VideoTiming) VALUES ('" + item._VideoId + "', '" + item._VideoName + "', '" + item._VideoLink + "', '" + item._VideoPrice.ToString () + "', '" + item._VideoTiming.ToString () + "')";
+					using (var c = _connection.CreateCommand ()) { 
 						c.CommandText = command;
 						c.ExecuteNonQuery ();
 					}
@@ -95,8 +95,7 @@ namespace VideoBuyApp
 
 				// This is the first time the app has run and/or that we need the DB.
 				// Copy a "template" DB from your assets, or programmatically create one like this:
-				var command = "INSERT INTO VideoBuy (_VideoId, _VideoName, _VideoLink, _VideoPrice, _VideoTiming) VALUES ('" + item._VideoId + "', '" + item._VideoName + "', '" + item._VideoLink + "', '" + item._VideoPrice.ToString + "', '" + item._VideoTiming.ToString ");";
-
+				var command = "INSERT INTO VideoBuy (_VideoId, _VideoName, _VideoLink, _VideoPrice, _VideoTiming) VALUES ('" + BDVideoItems._VideoId + "', '" + BDVideoItems._VideoName + "', '" + BDVideoItems._VideoLink + "', '" + BDVideoItems._VideoPrice.ToString () + "', '" + BDVideoItems._VideoTiming.ToString () + "')";
 				using (var c = _connection.CreateCommand ()) {
 					c.CommandText = command;
 					c.ExecuteNonQuery ();
@@ -106,63 +105,43 @@ namespace VideoBuyApp
 			}
 			return _FileExists;
 		}
-		/*public int Count {
-			get {
-				return _VideoItems.Length;
-			}
-		}*/
 
-		public VideoItem SelectItem(int ID){
-			VideoItem BDItem = new VideoItem();
-			if (_FileExists) {
-				_connection.Open ();
 
-				using (var contents = _connection.CreateCommand ()) {
-					contents.CommandText = "SELECT * FROM VideoBuyDB WHERE _VideoId='" + ID.ToString + "' LIMIT 1";
 
-					var r = contents.ExecuteReader ();
-					while (r.Read ())
-						BDItem = new VideoItem(){  
-						//_VideoId = Convert.ToDateTime(r ["_VideoId"].ToString ()), 
-						_VideoId = Convert.ToInt16(r ["_VideoId"].ToString ()), 
-						_VideoName = r ["_VideoName"].ToString (), 
-						_VideoLink = r ["__VideoLink"].ToString (), 
-						_VideoPrice = Convert.ToInt16(r ["_VideoPrice"].ToString ()),
-						_VideoTiming = Convert.ToInt16(r ["__VideoTiming"].ToString ())};
-				}
-				_connection.Close ();
-			}
+	public List<VideoItem> SelectBDItems()
 
-			return BDItem;
-		}
+	{
 
-		/*public List<VideoItem> SelectBDItems(){
-			List<VideoItem> BDitems = new List<Video>();
+		List<VideoItem> BDitems = new List<VideoItem>();
 
 			if (_FileExists) {
 				_connection.Open ();
 
 				using (var contents = _connection.CreateCommand ()) {
-					contents.CommandText = "SELECT * FROM BigDays ORDER BY _Name DESC";
+					contents.CommandText = "SELECT * FROM VideoBuy ORDER BY _VideoName DESC";
 
 					var r = contents.ExecuteReader ();
 					while (r.Read ())
 						BDitems.Add ( new VideoItem(){ 
-							__VideoId = Convert.ToInt16(r ["_VideoId"].ToString ()), 
+							_VideoId = Convert.ToInt16(r ["_VideoId"].ToString ()), 
 							_VideoName = r ["_VideoName"].ToString (), 
-							_VideoLink = r ["__VideoLink"].ToString (), 
+							_VideoLink = r ["_VideoLink"].ToString (), 
 							_VideoPrice = Convert.ToInt16(r ["_VideoPrice"].ToString ()),
-							_VideoTiming = Convert.ToInt16(r ["__VideoTiming"].ToString ()) } );
+							_VideoTiming = Convert.ToInt16(r ["_VideoTiming"].ToString ()) } );
 
 				}
 				_connection.Close ();
-				if( BDitems.Count > 0 )
+				/*if( BDitems.Count > 0 )
 					BDitems = BDitems.OrderBy(o=>o._EndDate).ToList();
-			}
-			return BDitems;
-		}*/
+			}*/
+
+		}
+		return BDitems;
 
 	}
+
+
+}
 }
 
 

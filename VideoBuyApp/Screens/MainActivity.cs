@@ -16,6 +16,7 @@ namespace VideoBuyApp
 		protected ListView _UiVideosList;
 		protected VideosListAdapter _VideosListAdapter;
 		public static VideoBuyDB _VideoDB;
+		//public static List <VideoItem> _BDitems; 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -24,14 +25,18 @@ namespace VideoBuyApp
 			SetContentView (Resource.Layout.Main);
 			_UiVideosList = FindViewById<ListView> (Resource.Id.UiVideosList);
 
-			//FakeData data = new FakeData ();
+			FakeData data = new FakeData ();
 			_VideoDB = new VideoBuyDB();
-			_VideoDB.ConnectToDB ();
+			_VideoDB.ConnectToDB ("VideoBuyDB.db3");
 			_VideoDB.CreateDB ();
-			_VideoDB.SelectItem ();
-			_VideosListAdapter = new VideosListAdapter (this, _VideoDB.SelectItem ());
+			//_VideoDB.Insert (data.allVideos.ToArray ());
+			//_VideoDB.SelectBDItems ();
+
+			_VideosListAdapter = new VideosListAdapter (this, _VideoDB.SelectBDItems().ToArray());
 			_UiVideosList.Adapter = _VideosListAdapter;
 		}
+
+
 	}
 	
 }
