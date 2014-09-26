@@ -8,9 +8,6 @@ namespace VideoBuyApp
 {
 	public class VideoBuyDB
 	{
-		//private static string dbPath = "VideoBuyDB.db3";
-		private bool _FileExist;
-		//private SqliteConnection connection;
 		protected VideoItem[] _VideoItems;
 		private SqliteConnection _connection;
 		private bool _FileExists;
@@ -123,6 +120,7 @@ namespace VideoBuyApp
 					var r = contents.ExecuteReader ();
 					while (r.Read ())
 						BDitems.Add ( new VideoItem(){ 
+
 							_VideoId = Convert.ToInt16(r ["_VideoId"].ToString ()), 
 							_VideoName = r ["_VideoName"].ToString (), 
 							_VideoLink = r ["_VideoLink"].ToString (), 
