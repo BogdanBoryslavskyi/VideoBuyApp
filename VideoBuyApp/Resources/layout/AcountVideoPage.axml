@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/black_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView1"
+        android:paddingBottom="20dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <SurfaceView
+                android:layout_width="match_parent"
+                android:layout_height="220.6dp"
+                android:id="@+id/videoPlayer"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:clickable="true"
+                android:visibility="visible" />
+            <TextView
+                android:text="Name: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/UiVideoTitleBuy"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Timing: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/VideoTiming"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Price: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/UiVideoPrice"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp" />
+            <Button
+                android:text="Set as ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bSetAsRingtone"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="3dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

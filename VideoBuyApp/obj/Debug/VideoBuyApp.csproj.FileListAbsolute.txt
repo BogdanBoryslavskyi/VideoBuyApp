@@ -146,3 +146,6 @@ D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\drawable\splash.png
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\drawable\black_bg1.png
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\R.cs.flag
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\uploadflags.txt
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideolist.xml
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideopage.xml
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountlogin.xml

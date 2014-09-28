@@ -56,6 +56,9 @@
     <Compile Include="Screens\SplashScreen.cs" />
     <Compile Include="FakeData.cs" />
     <Compile Include="VideoBuyDB.cs" />
+    <Compile Include="Screens\AcountVideoList.cs" />
+    <Compile Include="Screens\AcountVideoPage.cs" />
+    <Compile Include="Screens\AcountLogIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -78,6 +81,9 @@
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\black_bg1.png" />
+    <AndroidResource Include="Resources\layout\AcountVideoList.axml" />
+    <AndroidResource Include="Resources\layout\AcountVideoPage.axml" />
+    <AndroidResource Include="Resources\layout\AcountLogIn.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -42,11 +42,26 @@ namespace VideoBuyApp
 			_telephonyManager = (TelephonyManager)GetSystemService (Context.TelephonyService);
 			PhoneStateListener callListener = new PhoneStateListener (); 
 			_telephonyManager.Listen (callListener, PhoneStateListenerFlags.CallState);
-			BroadcastReceiver _broadcastReceiver = new BroadcastReceiver ();
+			//BroadcastReceiver _broadcastReceiver = new BroadcastReceiver ();
 
 		}
-		public void onCallStateChanged(int state, String incomingNumber){
-			switch (state) {
+
+		public void OnCallStateChanged (string state, string incomingNumber)
+		{
+			if (state == TelephonyManager.ExtraStateIdle) {
+			
+			}
+
+			if (state == TelephonyManager.ExtraStateOffhook) {
+
+			}
+
+			if (state == TelephonyManager.ExtraStateRinging) {
+				StartService (new Intent (this, typeof(BroadcastReceiver)));
+			}
+
+
+			/*switch (state) {
 			case TelephonyManager.ExtraStateIdle:
 				{
 					break;
@@ -62,8 +77,9 @@ namespace VideoBuyApp
 					break;
 				}
 
-			}
+			}*/
 		}
+
 	}
 	
 }
