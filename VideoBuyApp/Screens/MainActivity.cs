@@ -11,6 +11,8 @@ using Android.Telephony;
 
 namespace VideoBuyApp
 {
+	[BroadcastReceiver()]
+	[IntentFilter(new[] { "android.intent.action.PHONE_STATE" })]
 	[Activity (Label = "VideoBuyApp", Icon = "@drawable/icon", Theme = "@android:style/Theme.NoTitleBar")]
 	public class MainActivity : Activity
 	{
@@ -24,7 +26,7 @@ namespace VideoBuyApp
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
+			//GetSystemService (WindowManager.UpdateViewLayout);
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 			_UiVideosList = FindViewById<ListView> (Resource.Id.UiVideosList);
@@ -39,16 +41,20 @@ namespace VideoBuyApp
 			_VideosListAdapter = new VideosListAdapter (this, _VideoDB.SelectBDItems ().ToArray ());
 			_UiVideosList.Adapter = _VideosListAdapter;
 
-			_telephonyManager = (TelephonyManager)GetSystemService (Context.TelephonyService);
-			PhoneStateListener callListener = new PhoneStateListener (); 
+			_telephonyManager = (TelephonyManager)GetSystemService (Context.TelephonyService)  as TelephonyManager;
+			PhoneStateListener callListener = new PhoneStateListener ();
+			PhoneStateListenerFlags callStateListenerFlags = new PhoneStateListenerFlags();
 			_telephonyManager.Listen (callListener, PhoneStateListenerFlags.CallState);
-			//BroadcastReceiver _broadcastReceiver = new BroadcastReceiver ();
+		
 
 		}
 
 		public void OnCallStateChanged (string state, string incomingNumber)
 		{
-			if (state == TelephonyManager.ExtraStateIdle) {
+
+			//StartService (new Intent (this, typeof(IncomingCallReceiver)));
+		}
+			/*if (state == TelephonyManager.ExtraStateIdle) {
 			
 			}
 
@@ -57,7 +63,8 @@ namespace VideoBuyApp
 			}
 
 			if (state == TelephonyManager.ExtraStateRinging) {
-				StartService (new Intent (this, typeof(BroadcastReceiver)));
+				StartService (new Intent (this, typeof(IncomingCallReceiver)));
+				//Toast.MakeText(this,"Phone Is Riging", ToastLength.Long).Show();
 			}
 
 
@@ -78,10 +85,19 @@ namespace VideoBuyApp
 				}
 
 			}*/
-		}
+	/*	}
 
 	}
-	
+	[BroadcastReceiver]
+	[IntentFilter(new string[] { "android.provider.Telephony.Video_Reciver" })]
+	public class VideoReceiver : BroadcastReceiver
+	{
+		public override void OnReceive (Context context, Intent intent)
+		{
+			Toast.MakeText (context, "Incoming call", ToastLength.Long).Show ();
+			//get the sharedpreference and then do stuff
+		}*/	
+	}
 }
 
 

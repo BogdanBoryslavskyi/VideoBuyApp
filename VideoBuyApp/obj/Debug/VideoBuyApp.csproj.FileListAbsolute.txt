@@ -121,6 +121,9 @@ C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Deb
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\drawable\black_bg1.png
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\R.cs.flag
 C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\uploadflags.txt
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideolist.xml
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideopage.xml
+C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountlogin.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\bin\Debug\VideoBuyApp.dll
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\bin\Debug\VideoBuyApp.pdb
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\bin\Debug\VideoBuyApp.dll.mdb
@@ -144,8 +147,8 @@ D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\values\splashscreen.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\splashscreen.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\drawable\splash.png
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\drawable\black_bg1.png
+D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountvideolist.xml
+D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountvideopage.xml
+D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountlogin.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\R.cs.flag
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\uploadflags.txt
-C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideolist.xml
-C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountvideopage.xml
-C:\Users\Bogdan\Documents\Projects\GeniusAtamans\VideoBuyApp\VideoBuyApp\obj\Debug\res\layout\acountlogin.xml
