@@ -18,15 +18,12 @@ namespace VideoBuyApp
 		public override void OnReceive(Context context, Intent intent)
 		{
 			// ensure there is information
-			if (intent.Extras != null)
-			{
+
 				// get the incoming call state
 				string state = intent.GetStringExtra(TelephonyManager.ExtraState);
 				var telephone = intent.GetStringExtra(TelephonyManager.ExtraIncomingNumber);
 				if (string.IsNullOrEmpty(telephone))
-				{
-					telephone = string.Empty;
-				}
+	
 				// check the current state
 				if (state == TelephonyManager.ExtraStateRinging)
 				{
@@ -36,7 +33,8 @@ namespace VideoBuyApp
 					Intent i = new Intent(context, typeof(MainActivity));
 					//i.PutExtra(intent);
 					i.AddFlags(ActivityFlags.NewTask);
-					i.PutExtra("Number", telephone);
+					i.AddFlags (ActivityFlags.SingleTop);
+					//i.PutExtra("Number", telephone);
 					context.StartActivity (i);
 
 
@@ -53,6 +51,6 @@ namespace VideoBuyApp
 			}
 		}
 }
-}
+
 
 
