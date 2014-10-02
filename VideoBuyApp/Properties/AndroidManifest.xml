@@ -18,4 +18,5 @@
 	<uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" />
 	<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED" />
 	 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	 <uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

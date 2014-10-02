@@ -26,8 +26,8 @@ namespace VideoBuyApp
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			Window.AddFlags (WindowManagerFlags.NotTouchable);
-			Window.AddFlags (WindowManagerFlags.NotTouchModal);
+			//Window.AddFlags (WindowManagerFlags.NotTouchable);
+			//Window.AddFlags (WindowManagerFlags.NotTouchModal);
 			//GetSystemService (WindowManager.UpdateViewLayout);
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -45,20 +45,17 @@ namespace VideoBuyApp
 			//Intent i = new Intent (this, typeof(IncomingCallReceiver));
 			//StartService (i);
 
-			/*_telephonyManager = (TelephonyManager)GetSystemService (Context.TelephonyService)  as TelephonyManager;
+			_telephonyManager = (TelephonyManager)GetSystemService (Context.TelephonyService)  as TelephonyManager;
 			PhoneStateListener callListener = new PhoneStateListener ();
 			PhoneStateListenerFlags callStateListenerFlags = new PhoneStateListenerFlags();
 			_telephonyManager.Listen (callListener, PhoneStateListenerFlags.CallState);
-		*/
-			Toast.MakeText (this, "NOOMBERRRRRRRRRRRRRRRRRR", ToastLength.Long).Show();
+		
+
+
 
 		}
 
-		public void OnCallStateChanged (string state, string incomingNumber)
-		{
 
-			//StartService (new Intent (this, typeof(IncomingCallReceiver)));
-		}
 			/*if (state == TelephonyManager.ExtraStateIdle) {
 			
 			}

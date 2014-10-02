@@ -1,16 +1,15 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_14" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0123456789ABCDEF" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="VideoBuyApp\Screens\MainActivity.cs" Line="22" Column="22" />
+      <File FileName="VideoBuyApp\Screens\MainActivity.cs" Line="79" Column="79" />
       <File FileName="VideoBuyApp\Screens\FinalDialog.cs" Line="1" Column="1" />
       <File FileName="VideoBuyApp\Screens\PreviewBuyActivity.cs" Line="1" Column="1" />
       <File FileName="VideoBuyApp\Screens\AcountVideoList.cs" Line="1" Column="1" />
       <File FileName="VideoBuyApp\Screens\AcountVideoPage.cs" Line="1" Column="1" />
       <File FileName="VideoBuyApp\Screens\AcountLogIn.cs" Line="1" Column="1" />
-      <File FileName="VideoBuyApp\Screens\IncomingCallReceiver.cs" Line="6" Column="6" />
-      <File FileName="VideoBuyApp\Properties\AndroidManifest.xml" Line="79" Column="79" />
-      <File FileName="VideoBuyApp\Screens\EmptyCSharpFile.cs" Line="1" Column="1" />
+      <File FileName="VideoBuyApp\Screens\IncomingCallReceiver.cs" Line="4" Column="4" />
+      <File FileName="VideoBuyApp\Properties\AndroidManifest.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

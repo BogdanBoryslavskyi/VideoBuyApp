@@ -60,6 +60,7 @@
     <Compile Include="Screens\AcountVideoPage.cs" />
     <Compile Include="Screens\AcountLogIn.cs" />
     <Compile Include="Screens\IncomingCallReceiver.cs" />
+    <Compile Include="Screens\CallResiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
