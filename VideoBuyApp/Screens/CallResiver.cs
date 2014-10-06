@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Telephony;
 using Android.Media;
+using Android.Graphics;
 
 namespace VideoBuyApp
 {
@@ -22,10 +23,16 @@ namespace VideoBuyApp
 
 	public class CallResiver : BroadcastReceiver
 	{
+		protected Activity _Context;
+		private ViewGroup screen;
 		private MediaPlayer player;
 		private TelephonyManager _telephonyManager;
+		public ImageView _image;
+
+
 		public override void OnReceive (Context context, Intent intent)
 		{
+		
 			string state = intent.GetStringExtra(TelephonyManager.ExtraState);
 			 _telephonyManager = (TelephonyManager) context.GetSystemService(Context.TelephonyService) as TelephonyManager;
 			PhoneStateListener callListener = new PhoneStateListener ();
@@ -35,53 +42,38 @@ namespace VideoBuyApp
 
 			//_telephonyManager.Listen (, PhoneStateListenerFlags.CallState);
 			_telephonyManager.Listen (callListener, PhoneStateListenerFlags.CallState);
-			onCallStateChanged (state, null,context);
+			onCallStateChanged (state, null, context);
 		}
 	
-		public  void onCallStateChanged(string state, string incomingNumber, Context _conetext) { // TODO React to incoming call. // React to incoming call. string number=incomingNumber;
-
+		public  void onCallStateChanged(string state, string incomingNumber, Context _context) { // TODO React to incoming call. // React to incoming call. string number=incomingNumber;
+			//screen =_Context.FindViewById<ViewGroup>(Resource.Id.IncomingCall);
 			// If phone ringing
 			if(state == TelephonyManager.ExtraStateRinging )
 			{
-				var uri = Android.Net.Uri.Parse ("http://cs535214.vk.me/u649897/videos/98aad53c00.240.mp4");
-				videoPlayer (uri, _conetext);
+
+			
+				var i = new Intent(_context, typeof (PlayerSevise));
+				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
+				_context.StartService (i);
+
+
+
 				//Toast.MakeText(this, " Phone Is Riging ", ToastLength.Long).Show()
-				//Toast.MakeText(_conetext,"phone is neither ringing nor in a call", ToastLength.Long).Show();
+				Toast.MakeText(_context,"phone is neither ringing nor in a call", ToastLength.Long).Show();
+
+				}
+			if (state == TelephonyManager.ExtraStateIdle) {
+				var i = new Intent(_context, typeof (PlayerSevise));
+				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.StopCommand);
+				_context.StartService (i);
 			}
-
-			// If incoming call received
-			if(state==TelephonyManager.ExtraStateOffhook)
-			{
-			}
-
-			if(state==TelephonyManager.ExtraStateIdle)
-			{			}
-		}
-		public void videoPlayer(Android.Net.Uri path, Context _context){
-			//get current window information, and set format, set it up differently, if you need some special effects
-
-			//getWindow().setFormat(PixelFormat.TRANSLUCENT);
-			//the VideoView will hold the video
-
-			VideoView videoHolder = new VideoView(_context);
-			//MediaController is the ui control howering above the video (just like in the default youtube player).
-			videoHolder.SetMediaController(new MediaController(_context));
-			//assing a video file to the video holder
-			//var uri = Android.Net.Uri.Parse (path);
-			videoHolder.SetVideoURI(path);
-			//get focus, before playing the video.
-			videoHolder.RequestFocus();
-
-			videoHolder.Start();
-			}
-
-		}
 				
 		 
 
 
 	
-
+	}
+}
 }
 
 

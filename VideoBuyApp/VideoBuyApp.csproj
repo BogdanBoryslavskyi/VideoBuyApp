@@ -59,8 +59,8 @@
     <Compile Include="Screens\AcountVideoList.cs" />
     <Compile Include="Screens\AcountVideoPage.cs" />
     <Compile Include="Screens\AcountLogIn.cs" />
-    <Compile Include="Screens\IncomingCallReceiver.cs" />
     <Compile Include="Screens\CallResiver.cs" />
+    <Compile Include="Screens\PlayerSevise.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -86,9 +86,12 @@
     <AndroidResource Include="Resources\layout\AcountVideoList.axml" />
     <AndroidResource Include="Resources\layout\AcountVideoPage.axml" />
     <AndroidResource Include="Resources\layout\AcountLogIn.axml" />
+    <AndroidResource Include="Resources\raw\test.mp4" />
+    <AndroidResource Include="Resources\layout\IncomingCall.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Screens\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
 </Project>
