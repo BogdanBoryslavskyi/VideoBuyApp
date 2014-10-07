@@ -151,6 +151,6 @@ D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountvideolist.
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountvideopage.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\acountlogin.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\raw\test.mp4
+D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\incomingcall.xml
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\R.cs.flag
 D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\uploadflags.txt
-D:\AndroidDev\Xamarine_Progect\VideoBuyApp\obj\Debug\res\layout\incomingcall.xml

@@ -67,6 +67,12 @@ namespace VideoBuyApp
 				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.StopCommand);
 				_context.StartService (i);
 			}
+
+			if (state == TelephonyManager.ExtraStateOffhook) {
+				var i = new Intent(_context, typeof (PlayerSevise));
+				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.StopCommand);
+				_context.StartService (i);
+			}
 				
 		 
 
