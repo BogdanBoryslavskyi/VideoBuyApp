@@ -16,7 +16,7 @@ using Android.Graphics;
 namespace VideoBuyApp
 {
 	[Service]
-	public class PlayerSevise:Service
+	public class PlayerSevise:Service, MediaPlayer.IOnPreparedListener,ISurfaceHolderCallback
 	{
 		public const string PlayCommand = "Play";
 		public const string StopCommand = "Stop";
@@ -24,9 +24,11 @@ namespace VideoBuyApp
 		private const int VideoPlayingNotification = 1;
 		private MediaPlayer _player;
 		private LinearLayout mOverlay;
-		private VideoView tv;
+		private VideoView _tv;
 		LinearLayout.LayoutParams _layoutParamsPortrait;
 		LinearLayout.LayoutParams _layoutParamsLandscape;
+		ISurfaceHolder _holder; 
+
 
 		public override IBinder OnBind(Intent intent)
 		{
@@ -57,13 +59,14 @@ namespace VideoBuyApp
 
 		private void startPlaying()
 		{
-
-
-
 			//LayoutInflater inflater = new LayoutInflater();
+			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
+			View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
+			_tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
+			play (Resource.Raw.test);
+			/*
 
-			//View view = Context.LayoutInflaterService (Resource.Layout.IncomingScreen);
-			//var videotest = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
+			/
 			//var videotest = new VideoView (this);
 			//var _surface = FindViewById<SurfaceView>(Resource.Id.incomingVideo);
 			if (_player != null && _player.IsPlaying)
@@ -76,8 +79,13 @@ namespace VideoBuyApp
 			//holder.AddCallback();
 
 			_player = MediaPlayer.Create(this, Resource.Raw.test);
+			//_player.SetDisplay(holder);
+
+			_player.Prepared += new EventHandler(mediaPlayer_Prepared);
+			//_player.PrepareAsync();
+
 			//_player.SetScreenOnWhilePlaying(true);
-			_player.SetDisplay (createOverlay());
+			//_player.SetDisplay (createOverlay());
 			//_player.SetDisplay (holder);
 			//_player.Prepared += new EventHandler(mediaPlayer_Prepared);
 			//_player.PrepareAsync();
@@ -105,8 +113,8 @@ namespace VideoBuyApp
 			var layoutParams = new LinearLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent);
 			rl.LayoutParameters = layoutParams;
 			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
-			//View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
-			//var tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
+			View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
+			var tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
 			var surfaceOrientation = SurfaceOrientation.Rotation0;
 			//var surfaceOrientation = WindowManager.DefaultDisplay.Rotation;
 			// create layout based upon orientation
@@ -136,18 +144,57 @@ namespace VideoBuyApp
 			//wm.addView(mOverlay, params);*/
 
 		}
-			var tv = new VideoView (this);
+			//var tv = new VideoView (this);
 
 			// set TextView's LayoutParameters
 			tv.LayoutParameters = layoutParams;
 
 			// add TextView to the layout
 			//var tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
-			rl.AddView (tv);
-			ISurfaceHolder holder = tv.Holder;
-			return holder;
+			//rl.AddView (tv);
+			//_holder = tv.Holder;
+			return tv.Holder;
 		}
 
+
+	
+
+	void play(int fullPath)
+	{
+			ISurfaceHolder holder = _tv.Holder;
+		holder.SetType (SurfaceType.PushBuffers);
+		// Necesito saber cuando la superficie esta creada para poder asignar el Display al MediaPlayer
+		holder.AddCallback (this);
+			_player = new MediaPlayer();
+
+		Android.Content.Res.AssetFileDescriptor afd = this.Assets.OpenFd("test.mp4");
+		if (afd != null)
+		{
+			_player.SetDataSource(afd.FileDescriptor, afd.StartOffset, afd.Length);
+			_player.Prepare ();
+			_player.Start();
+		}
+	}
+
+	public void SurfaceCreated (ISurfaceHolder holder)
+	{
+		Console.WriteLine ("SurfaceCreated");
+		_player.SetDisplay(holder);
+	}
+
+	public void SurfaceDestroyed (ISurfaceHolder holder)
+	{
+		Console.WriteLine ("SurfaceDestroyed");
+	}
+
+	public void SurfaceChanged (ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
+	{
+		Console.WriteLine ("SurfaceChanged");
+	}
+
+	public void OnPrepared(MediaPlayer mp) {
+		mp.Start();
+	}
 		private void stopPlaying()
 		{
 			if (_player == null || !_player.IsPlaying)
