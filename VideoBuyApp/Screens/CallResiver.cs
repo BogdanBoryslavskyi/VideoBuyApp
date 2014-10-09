@@ -52,10 +52,13 @@ namespace VideoBuyApp
 			{
 
 			
-				var i = new Intent(_context, typeof (PlayerSevise));
-				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
-				_context.StartService (i);
-
+				//var i = new Intent(_context, typeof (PlayerSevise));
+				//i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
+				//_context.StartService (i);
+				var i = new Intent(_context, typeof (CallActivity));
+				i.SetFlags (ActivityFlags.NewTask);
+				//i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
+				_context.StartActivity (i);
 
 
 				//Toast.MakeText(this, " Phone Is Riging ", ToastLength.Long).Show()

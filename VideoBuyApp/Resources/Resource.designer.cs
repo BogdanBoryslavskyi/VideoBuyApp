@@ -81,23 +81,23 @@ namespace VideoBuyApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070010
-			public const int MassageField = 2131165200;
+			// aapt resource value: 0x7f070011
+			public const int MassageField = 2131165201;
 			
 			// aapt resource value: 0x7f07000a
 			public const int MassageTechnicField = 2131165194;
 			
-			// aapt resource value: 0x7f070015
-			public const int UiPreviewAndBuyButton = 2131165205;
+			// aapt resource value: 0x7f070016
+			public const int UiPreviewAndBuyButton = 2131165206;
 			
-			// aapt resource value: 0x7f070013
-			public const int UiVideoIcon = 2131165203;
+			// aapt resource value: 0x7f070014
+			public const int UiVideoIcon = 2131165204;
 			
 			// aapt resource value: 0x7f070008
 			public const int UiVideoPrice = 2131165192;
 			
-			// aapt resource value: 0x7f070014
-			public const int UiVideoTitle = 2131165204;
+			// aapt resource value: 0x7f070015
+			public const int UiVideoTitle = 2131165205;
 			
 			// aapt resource value: 0x7f070006
 			public const int UiVideoTitleBuy = 2131165190;
@@ -108,8 +108,8 @@ namespace VideoBuyApp
 			// aapt resource value: 0x7f070007
 			public const int VideoTiming = 2131165191;
 			
-			// aapt resource value: 0x7f070011
-			public const int bBuy = 2131165201;
+			// aapt resource value: 0x7f070012
+			public const int bBuy = 2131165202;
 			
 			// aapt resource value: 0x7f070001
 			public const int bLogIn = 2131165185;
@@ -123,11 +123,11 @@ namespace VideoBuyApp
 			// aapt resource value: 0x7f070000
 			public const int editText1 = 2131165184;
 			
-			// aapt resource value: 0x7f070012
-			public const int imageView1 = 2131165202;
+			// aapt resource value: 0x7f070013
+			public const int imageView1 = 2131165203;
 			
-			// aapt resource value: 0x7f07000f
-			public const int incomingVideo = 2131165199;
+			// aapt resource value: 0x7f070010
+			public const int incomingVideo = 2131165200;
 			
 			// aapt resource value: 0x7f07000d
 			public const int radioButtonEmail = 2131165197;
@@ -146,6 +146,9 @@ namespace VideoBuyApp
 			
 			// aapt resource value: 0x7f070005
 			public const int videoPlayer = 2131165189;
+			
+			// aapt resource value: 0x7f07000f
+			public const int videocontainer = 2131165199;
 			
 			static Id()
 			{

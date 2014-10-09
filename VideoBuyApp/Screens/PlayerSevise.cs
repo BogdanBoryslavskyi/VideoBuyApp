@@ -24,7 +24,7 @@ namespace VideoBuyApp
 		private const int VideoPlayingNotification = 1;
 		private MediaPlayer _player;
 		private LinearLayout mOverlay;
-		private VideoView _tv;
+		private SurfaceView _tv;
 		LinearLayout.LayoutParams _layoutParamsPortrait;
 		LinearLayout.LayoutParams _layoutParamsLandscape;
 		ISurfaceHolder _holder; 
@@ -59,107 +59,31 @@ namespace VideoBuyApp
 
 		private void startPlaying()
 		{
-			//LayoutInflater inflater = new LayoutInflater();
+
 			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
-			View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
-			_tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
-			play (Resource.Raw.test);
-			/*
+			View view = inflater.Inflate (Resource.Id.incomingVideo,null,false);
+			View _container = inflater.Inflate (Resource.Layout.IncomingCall, null, false);
+		
+			//View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
+			_tv = view.FindViewById<SurfaceView> (Resource.Id.incomingVideo);
 
-			/
-			//var videotest = new VideoView (this);
-			//var _surface = FindViewById<SurfaceView>(Resource.Id.incomingVideo);
-			if (_player != null && _player.IsPlaying)
-				return;
-			//createOverlay ();	
-			//ISurfaceHolder holder = tv.Holder;
-
-			//MediaController _media = new MediaController (inflater);
-			//holder.SetType (SurfaceType.Normal);
-			//holder.AddCallback();
-
-			_player = MediaPlayer.Create(this, Resource.Raw.test);
-			//_player.SetDisplay(holder);
-
-			_player.Prepared += new EventHandler(mediaPlayer_Prepared);
-			//_player.PrepareAsync();
-
-			//_player.SetScreenOnWhilePlaying(true);
-			//_player.SetDisplay (createOverlay());
-			//_player.SetDisplay (holder);
-			//_player.Prepared += new EventHandler(mediaPlayer_Prepared);
-			//_player.PrepareAsync();
-			_player.Start();
-
-			/*_player.Completion += (sender, e) => StopSelf();
+			play ("test.mp4");
+		
 
 			var notificationService = (NotificationManager) GetSystemService(NotificationService);
 			var notification = new Notification(Resource.Drawable.Icon, "Music started",
 				Java.Lang.JavaSystem.CurrentTimeMillis());
 			notification.Flags = NotificationFlags.NoClear;
 
-			var notificationIntent = PendingIntent.GetActivity(this, 0, new Intent(this, typeof(CallResiver)), 0);
-			//notification.SetLatestEventInfo(this, "Now Playing", "Nine Inch Nails - 7 Ghosts I", notificationIntent);
+			var notificationIntent = PendingIntent.GetActivity(this, 0, new Intent(this, typeof(CallActivity)), 0);
 
-			//notificationService.Notify(MusicPlayingNotification, notification);
 			notificationService.Notify (VideoPlayingNotification, notification);
-			*/
-		}
-		private ISurfaceHolder createOverlay() {
-
-			var rl = new LinearLayout (this);
-
-			// set layout parameters
-			var layoutParams = new LinearLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent);
-			rl.LayoutParameters = layoutParams;
-			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
-			View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
-			var tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
-			var surfaceOrientation = SurfaceOrientation.Rotation0;
-			//var surfaceOrientation = WindowManager.DefaultDisplay.Rotation;
-			// create layout based upon orientation
-			LinearLayout.LayoutParams tvLayoutParams;
-
-
-			if (surfaceOrientation == SurfaceOrientation.Rotation0 || surfaceOrientation == SurfaceOrientation.Rotation180) {
-				tvLayoutParams = new LinearLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.WrapContent);
-			} else {
-				tvLayoutParams = new LinearLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.WrapContent);
-				tvLayoutParams.LeftMargin = 100;
-				tvLayoutParams.TopMargin = 100;
-				// create TextView control}
-			
-			// Create System overlay video
-			/*WindowManagerLayoutParams param = new WindowManagerLayoutParams (
-				                              WindowManagerFlags.Fullscreen|WindowManagerFlags.NotFocusable |
-			                                  WindowManagerFlags.NotTouchModal);
-			param.Gravity = GravityFlags.Bottom;
-			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
-			View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
-
-			//WindowManagerLayoutParams wm = (WindowManagerLayoutParams)GetSystemService (WindowService); 
-			Window wm = (Window)GetSystemService (WindowService);
-			wm.AddContentView (mOverlay, param);
-			var videotest = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
-			//wm.addView(mOverlay, params);*/
 
 		}
-			//var tv = new VideoView (this);
-
-			// set TextView's LayoutParameters
-			tv.LayoutParameters = layoutParams;
-
-			// add TextView to the layout
-			//var tv = view.FindViewById<VideoView> (Resource.Id.incomingVideo);
-			//rl.AddView (tv);
-			//_holder = tv.Holder;
-			return tv.Holder;
-		}
-
-
+	
 	
 
-	void play(int fullPath)
+		void play(string fullPath)
 	{
 			ISurfaceHolder holder = _tv.Holder;
 		holder.SetType (SurfaceType.PushBuffers);
@@ -167,7 +91,7 @@ namespace VideoBuyApp
 		holder.AddCallback (this);
 			_player = new MediaPlayer();
 
-		Android.Content.Res.AssetFileDescriptor afd = this.Assets.OpenFd("test.mp4");
+			Android.Content.Res.AssetFileDescriptor afd = this.Assets.OpenFd(fullPath);
 		if (afd != null)
 		{
 			_player.SetDataSource(afd.FileDescriptor, afd.StartOffset, afd.Length);

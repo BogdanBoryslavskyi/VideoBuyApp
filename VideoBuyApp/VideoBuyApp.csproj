@@ -61,6 +61,7 @@
     <Compile Include="Screens\AcountLogIn.cs" />
     <Compile Include="Screens\CallResiver.cs" />
     <Compile Include="Screens\PlayerSevise.cs" />
+    <Compile Include="Screens\CallActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -96,5 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\test.mp4" />
+    <AndroidAsset Include="Assets\test2.3gp" />
   </ItemGroup>
 </Project>
