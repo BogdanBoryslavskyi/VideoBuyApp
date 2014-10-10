@@ -21,21 +21,22 @@ public final class R {
         public static final int wood_bg2=0x7f020007;
     }
     public static final class id {
-        public static final int MassageField=0x7f070011;
+        public static final int MassageField=0x7f070012;
         public static final int MassageTechnicField=0x7f07000a;
-        public static final int UiPreviewAndBuyButton=0x7f070016;
-        public static final int UiVideoIcon=0x7f070014;
+        public static final int UiPreviewAndBuyButton=0x7f070017;
+        public static final int UiVideoIcon=0x7f070015;
         public static final int UiVideoPrice=0x7f070008;
-        public static final int UiVideoTitle=0x7f070015;
+        public static final int UiVideoTitle=0x7f070016;
         public static final int UiVideoTitleBuy=0x7f070006;
         public static final int UiVideosList=0x7f070003;
         public static final int VideoTiming=0x7f070007;
-        public static final int bBuy=0x7f070012;
+        public static final int bAnsver=0x7f070011;
+        public static final int bBuy=0x7f070013;
         public static final int bLogIn=0x7f070001;
         public static final int bSetAsRingtone=0x7f070009;
         public static final int bSignUp=0x7f070002;
         public static final int editText1=0x7f070000;
-        public static final int imageView1=0x7f070013;
+        public static final int imageView1=0x7f070014;
         public static final int incomingVideo=0x7f070010;
         public static final int radioButtonEmail=0x7f07000d;
         public static final int radioButtonSMS=0x7f07000e;

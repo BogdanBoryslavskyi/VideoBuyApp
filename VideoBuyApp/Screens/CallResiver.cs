@@ -52,29 +52,30 @@ namespace VideoBuyApp
 			{
 
 			
-				//var i = new Intent(_context, typeof (PlayerSevise));
-				//i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
-				//_context.StartService (i);
+				/*var i = new Intent(_context, typeof (PlayerSevise));
+				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
+				_context.StartService (i);*/
+
 				var i = new Intent(_context, typeof (CallActivity));
 				i.SetFlags (ActivityFlags.NewTask);
-				//i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.PlayCommand);
 				_context.StartActivity (i);
 
+				
 
 				//Toast.MakeText(this, " Phone Is Riging ", ToastLength.Long).Show()
-				Toast.MakeText(_context,"phone is neither ringing nor in a call", ToastLength.Long).Show();
+				//Toast.MakeText(_context,"phone is neither ringing nor in a call", ToastLength.Long).Show();
 
 				}
 			if (state == TelephonyManager.ExtraStateIdle) {
-				var i = new Intent(_context, typeof (PlayerSevise));
+				/*var i = new Intent(_context, typeof (PlayerSevise));
 				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.StopCommand);
-				_context.StartService (i);
+				_context.StartService (i);*/
 			}
 
 			if (state == TelephonyManager.ExtraStateOffhook) {
-				var i = new Intent(_context, typeof (PlayerSevise));
+				/*var i = new Intent(_context, typeof (PlayerSevise));
 				i.PutExtra(PlayerSevise.CommandExtraName, PlayerSevise.StopCommand);
-				_context.StartService (i);
+				_context.StartService (i);*/
 			}
 				
 		 

@@ -18,14 +18,28 @@ namespace VideoBuyApp
 	public class CallActivity : Activity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
 	{
 		MediaPlayer player;
-		VideoView videoView;
+		SurfaceView videoView;
+		//Button bAnsver;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.IncomingCall);
-			// Create your application here
-			videoView = FindViewById<VideoView> (Resource.Id.incomingVideo);
+			videoView = FindViewById<SurfaceView> (Resource.Id.incomingVideo);
+
+
+			var bAnsver = FindViewById<Button> (Resource.Id.bAnsver);
+			bAnsver.Click += delegate {
+
+			
+				Intent buttonUp = new Intent (Intent.ActionMediaButton);
+
+				//buttonUp.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_HEADSETHOOK));
+				buttonUp.PutExtra (Intent.ExtraKeyEvent, new KeyEvent (KeyEventActions.Up, Keycode.Headsethook));
+
+				SendOrderedBroadcast (buttonUp, "android.permission.CALL_PRIVILEGED");
+			};
 			play("test.mp4");
+
 		}
 		void play(string fullPath)
 		{

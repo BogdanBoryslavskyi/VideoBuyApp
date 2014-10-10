@@ -61,23 +61,30 @@ namespace VideoBuyApp
 		{
 
 			var inflater = Application.Context.GetSystemService(Context.LayoutInflaterService) as LayoutInflater;
-			View view = inflater.Inflate (Resource.Id.incomingVideo,null,false);
+			//View view = inflater.Inflate (Resource.Id.incomingVideo,null,false);
 			View _container = inflater.Inflate (Resource.Layout.IncomingCall, null, false);
-		
+			//_container.SetBackgroundResource (view);
+			LinearLayout _lay = new LinearLayout (this);
+			SurfaceView _tv = new SurfaceView (this);
+			//_tv = _container.FindViewById<SurfaceView> (Resource.Id.incomingVideo);
+			_tv = _container.FindViewById<SurfaceView> (Resource.Id.incomingVideo);
+			_lay.RemoveView (_tv);
+			_lay.AddView (_tv);	
+
 			//View view = inflater.Inflate(Resource.Layout.IncomingCall,null);
-			_tv = view.FindViewById<SurfaceView> (Resource.Id.incomingVideo);
+		
 
 			play ("test.mp4");
 		
 
-			var notificationService = (NotificationManager) GetSystemService(NotificationService);
+			/*var notificationService = (NotificationManager) GetSystemService(NotificationService);
 			var notification = new Notification(Resource.Drawable.Icon, "Music started",
 				Java.Lang.JavaSystem.CurrentTimeMillis());
 			notification.Flags = NotificationFlags.NoClear;
 
 			var notificationIntent = PendingIntent.GetActivity(this, 0, new Intent(this, typeof(CallActivity)), 0);
 
-			notificationService.Notify (VideoPlayingNotification, notification);
+			notificationService.Notify (VideoPlayingNotification, notification);*/
 
 		}
 	
@@ -96,6 +103,7 @@ namespace VideoBuyApp
 		{
 			_player.SetDataSource(afd.FileDescriptor, afd.StartOffset, afd.Length);
 			_player.Prepare ();
+
 			_player.Start();
 		}
 	}
