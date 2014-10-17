@@ -1,11 +1,11 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_14" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VideoBuyApp\Screens\CallActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0123456789ABCDEF" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VideoBuyApp\Screens\CallResiver.cs">
     <Files>
-      <File FileName="VideoBuyApp\Screens\CallResiver.cs" Line="32" Column="32" />
-      <File FileName="VideoBuyApp\Screens\PlayerSevise.cs" Line="3" Column="3" />
-      <File FileName="VideoBuyApp\Screens\PreviewBuyActivity.cs" Line="4" Column="4" />
-      <File FileName="VideoBuyApp\Screens\CallActivity.cs" Line="8" Column="8" />
+      <File FileName="VideoBuyApp\Screens\CallResiver.cs" Line="14" Column="14" />
+      <File FileName="VideoBuyApp\Screens\PlayerSevise.cs" Line="1" Column="1" />
+      <File FileName="VideoBuyApp\Screens\PreviewBuyActivity.cs" Line="1" Column="1" />
+      <File FileName="VideoBuyApp\Screens\CallActivity.cs" Line="1" Column="1" />
       <File FileName="VideoBuyApp\VideosListAdapter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -22,7 +22,7 @@
       <Breakpoint file="D:\AndroidDev\Xamarine_Progect\VideoBuyApp\Screens\PlayerSevise.cs" line="296" column="1" />
       <Breakpoint file="D:\AndroidDev\Xamarine_Progect\VideoBuyApp\Screens\PlayerSevise.cs" line="300" column="14" />
       <Breakpoint file="D:\AndroidDev\Xamarine_Progect\VideoBuyApp\Screens\PlayerSevise.cs" line="272" column="1" />
-      <Breakpoint file="D:\AndroidDev\Xamarine_Progect\VideoBuyApp\Screens\CallActivity.cs" line="62" column="1" />
+      <Breakpoint file="D:\AndroidDev\Xamarine_Progect\VideoBuyApp\Screens\CallActivity.cs" line="55" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
